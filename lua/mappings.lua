@@ -17,6 +17,11 @@ end, { desc = "Hover definition" })
 
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
+map("n", "<leader>fr", function()
+  require("telescope.builtin").lsp_references()
+end, { desc = "Telescope" })
+map("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git signs" })
+
 -- map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
 -- local nomap = vim.keymap.del

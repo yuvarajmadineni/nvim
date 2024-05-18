@@ -33,6 +33,7 @@ return {
         "html-lsp",
         "css-lsp",
         "prettierd",
+        "eslint_d",
         "rust-analyzer",
         "typescript-language-server",
         "tailwindcss-language-server",
@@ -61,6 +62,9 @@ return {
   {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+    },
     opts = function()
       return require "configs.null-ls"
     end,
@@ -122,7 +126,12 @@ return {
     "aznhe21/actions-preview.nvim",
     lazy = false,
     config = function()
-      vim.keymap.set("n", "<leader>ca", require("actions-preview").code_actions)
+      vim.keymap.set({ "v", "n" }, "<leader>gf", require("actions-preview").code_actions)
     end,
+  },
+
+  {
+    "tpope/vim-fugitive",
+    event = "VeryLazy",
   },
 }
