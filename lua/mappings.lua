@@ -32,9 +32,9 @@ map("n", "<leader>h", "")
 -- nomap("n", "<C-k>")
 -- nomap("n", "<C-l>")
 --
--- map("n", "<C-k>", ":wincmd k<CR>")
--- map("n", "<C-j>", ":wincmd j<CR>")
--- map("n", "<C-h>", ":wincmd h<CR>")
--- map("n", "<C-l>", ":wincmd l<CR>")
+map("n", "<C-k>", ":TmuxNavigateUp<CR>")
+map("n", "<C-j>", ":TmuxNavigateDown<CR>")
+map("n", "<C-h>", ":TmuxNavigateLeft<CR>")
+map("n", "<C-l>", ":TmuxNavigateUp<CR>")
 --
 -- -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
