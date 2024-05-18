@@ -48,6 +48,7 @@ return {
   },
   {
     "mfussenegger/nvim-dap",
+    event = "VeryLazy"
   },
   {
     "saecki/crates.nvim",
