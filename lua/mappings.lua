@@ -5,6 +5,7 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
+--  Debugging
 map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle Breakpoint" })
 map("n", "<leader>dus", function()
   local widgets = require "dap.ui.widgets"
@@ -20,7 +21,7 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "<leader>fr", function()
   require("telescope.builtin").lsp_references()
 end, { desc = "Telescope" })
-map("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git signs" })
+map("n", "<leader>h", "")
 
 -- map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
