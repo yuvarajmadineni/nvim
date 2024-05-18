@@ -6,12 +6,12 @@ local map = vim.keymap.set
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
 --  Debugging
-map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle Breakpoint" })
-map("n", "<leader>dus", function()
-  local widgets = require "dap.ui.widgets"
-  local sidebar = widgets.sidebar(widgets.scopes)
-  sidebar.open()
-end, { desc = "Open debugging session" })
+-- map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Toggle Breakpoint" })
+-- map("n", "<leader>dus", function()
+--   local widgets = require "dap.ui.widgets"
+--   local sidebar = widgets.sidebar(widgets.scopes)
+--   sidebar.open()
+-- end, { desc = "Open debugging session" })
 map("n", "<leader>gh", function()
   vim.lsp.buf.hover()
 end, { desc = "Hover definition" })

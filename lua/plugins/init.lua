@@ -44,11 +44,7 @@ return {
   {
     "mrcjkb/rustaceanvim",
     version = "^4", -- Recommended
-    lazy = false, -- This plugin is already lazy
-  },
-  {
-    "mfussenegger/nvim-dap",
-    event = "VeryLazy"
+    -- lazy = false, -- This plugin is already lazy
   },
   {
     "saecki/crates.nvim",
@@ -125,7 +121,8 @@ return {
 
   {
     "aznhe21/actions-preview.nvim",
-    lazy = false,
+    -- lazy = false,
+    event = "VeryLazy",
     config = function()
       vim.keymap.set({ "v", "n" }, "<leader>gf", require("actions-preview").code_actions)
     end,
