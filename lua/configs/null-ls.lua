@@ -6,11 +6,11 @@ local opts = {
     require "none-ls.diagnostics.eslint", -- requires none-ls-extras.nvim
   },
   on_attach = function(client, bufnr)
-    if client.supports_method "textDocument/formatting" then
-      vim.api.nvim_clear_autocmds {
-        group = augroup,
-        buffer = bufnr,
-      }
+    -- if client.supports_method "textDocument/formatting" then
+    --   vim.api.nvim_clear_autocmds {
+    --     group = augroup,
+    --     buffer = bufnr,
+    --   }
       -- vim.api.nvim_create_autocmd("BufWritePre", {
       --   group = augroup,
       --   buffer = bufnr,
@@ -18,11 +18,11 @@ local opts = {
       --     vim.lsp.buf.format { bufnr = bufnr }
       --   end,
       -- })
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        command = "EslintFixAll",
-      })
-    end
+      --   vim.api.nvim_create_autocmd("BufWritePre", {
+      --     buffer = bufnr,
+      --     command = "EslintFixAll",
+      --   })
+    -- end
   end,
 }
 

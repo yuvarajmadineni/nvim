@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -88,6 +88,9 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+dependencies = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
     opts = {
       ensure_installed = {
         "vim",
@@ -98,7 +101,11 @@ return {
         "javascript",
         "typescript",
         "tsx",
+        "jsx",
       },
+      -- autotag = {
+      --   enable = true,
+      -- },
     },
   },
   {
@@ -131,5 +138,20 @@ return {
   {
     "tpope/vim-fugitive",
     event = "VeryLazy",
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+ {
+    "numToStr/Comment.nvim",
+    dependencies = "JoosepAlviste/nvim-ts-context-commentstring",
+    config = function()
+      require("Comment").setup {
+        pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+      }
+    end,
   },
 }
