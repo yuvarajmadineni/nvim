@@ -57,16 +57,6 @@ return {
     "hrsh7th/nvim-cmp",
   },
   {
-    "nvimtools/none-ls.nvim",
-    event = "VeryLazy",
-    dependencies = {
-      "nvimtools/none-ls-extras.nvim",
-    },
-    opts = function()
-      return require "configs.null-ls"
-    end,
-  },
-  {
     "windwp/nvim-ts-autotag",
     ft = {
       "javascript",
@@ -88,7 +78,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-dependencies = {
+    dependencies = {
       "JoosepAlviste/nvim-ts-context-commentstring",
     },
     opts = {
@@ -101,7 +91,6 @@ dependencies = {
         "javascript",
         "typescript",
         "tsx",
-        "jsx",
       },
       -- autotag = {
       --   enable = true,
@@ -145,7 +134,7 @@ dependencies = {
       require("nvim-ts-autotag").setup()
     end,
   },
- {
+  {
     "numToStr/Comment.nvim",
     dependencies = "JoosepAlviste/nvim-ts-context-commentstring",
     config = function()
