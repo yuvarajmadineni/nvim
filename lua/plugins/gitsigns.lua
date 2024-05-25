@@ -41,7 +41,7 @@ return {
         end, { expr = true })
 
         -- Actions
-        map("n", "[c", ":Gitsigns next_hunk<CR>", { desc = "Git signs next_hunk" })
+        -- map("n", "[c", ":Gitsigns next_hunk<CR>", { desc = "Git signs next_hunk" })
         map({ "n", "v" }, "<leader>hs", ":Gitsigns stage_hunk<CR>")
         map({ "n", "v" }, "<leader>hr", ":Gitsigns reset_hunk<CR>")
         map("n", "<leader>hS", gs.stage_buffer, { desc = "Git signs stage buffer" })

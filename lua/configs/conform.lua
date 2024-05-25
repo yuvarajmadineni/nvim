@@ -7,6 +7,8 @@ local options = {
     typescriptreact = { "prettier", "eslint_d", "prettierd" },
     css = { "prettierd" },
     html = { "prettierd" },
+    yaml = { "prettierd" },
+    json = { "eslint_d", "prettierd" },
   },
 
   format_on_save = {

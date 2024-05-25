@@ -35,6 +35,6 @@ map("n", "<leader>h", "")
 map("n", "<C-k>", ":TmuxNavigateUp<CR>")
 map("n", "<C-j>", ":TmuxNavigateDown<CR>")
 map("n", "<C-h>", ":TmuxNavigateLeft<CR>")
-map("n", "<C-l>", ":TmuxNavigateUp<CR>")
+map("n", "<C-l>", ":TmuxNavigateRight<CR>")
 --
 -- -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
