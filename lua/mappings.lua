@@ -12,7 +12,7 @@ local map = vim.keymap.set
 --   local sidebar = widgets.sidebar(widgets.scopes)
 --   sidebar.open()
 -- end, { desc = "Open debugging session" })
-map("n", "<leader>gh", function()
+map("n", "<S-k>", function()
   vim.lsp.buf.hover()
 end, { desc = "Hover definition" })
 
@@ -22,6 +22,8 @@ map("n", "<leader>fr", function()
   require("telescope.builtin").lsp_references()
 end, { desc = "Telescope" })
 map("n", "<leader>h", "")
+map("n", "<C-cc>", "")
+map("n", "<C-c>", "<Esc>")
 
 -- map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 
@@ -36,5 +38,8 @@ map("n", "<C-k>", ":TmuxNavigateUp<CR>")
 map("n", "<C-j>", ":TmuxNavigateDown<CR>")
 map("n", "<C-h>", ":TmuxNavigateLeft<CR>")
 map("n", "<C-l>", ":TmuxNavigateRight<CR>")
+map("n", "<leader>re", function()
+  vim.lsp.buf.rename()
+end)
 --
 -- -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
