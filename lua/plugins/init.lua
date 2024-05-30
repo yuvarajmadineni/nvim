@@ -95,6 +95,9 @@ return {
       -- autotag = {
       --   enable = true,
       -- },
+      indent = {
+        enable = true,
+      },
     },
   },
   {
@@ -118,7 +121,6 @@ return {
   {
     "aznhe21/actions-preview.nvim",
     -- lazy = false,
-    event = "VeryLazy",
     config = function()
       vim.keymap.set({ "v", "n" }, "<leader>gf", require("actions-preview").code_actions)
     end,

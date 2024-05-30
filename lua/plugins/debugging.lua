@@ -10,7 +10,6 @@ return {
   {
     "mfussenegger/nvim-dap",
 
-    event = "VeryLazy",
     config = function()
       -- local dap = require "dap"
       local dap, dapui = require "dap", require "dapui"
