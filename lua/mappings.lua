@@ -24,6 +24,9 @@ end, { desc = "Telescope" })
 map("n", "<leader>h", "")
 map("n", "<C-cc>", "")
 map("n", "<C-c>", "<Esc>")
+map("n", "<leader>w", function()
+  require("nvchad.tabufline").closeAllBufs()
+end)
 
 -- map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
 

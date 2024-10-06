@@ -1,13 +1,13 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    javascript = { "eslint_d", "prettierd" },
-    typescript = { "eslint_d", "prettierd" },
-    javascriptreact = { "eslint_d", "prettierd" },
-    typescriptreact = { "eslint_d", "prettierd" },
+    javascript = { { "prettierd", "eslint_d" } },
+    typescript = { { "prettierd", "eslint_d" } },
+    javascriptreact = { { "prettierd", "eslint_d" } },
+    typescriptreact = { { "prettierd", "eslint_d" } },
     css = { "prettierd" },
     html = { "prettierd" },
-    yaml = { "prettierd" },
+    yaml = { { "prettierd", "eslint_d" } },
     json = { "eslint_d", "prettierd" },
   },
 
